@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Estonia&family=Inconsolata:wght@700&family=Satisfy&display=swap');
+
+nav {
+    padding: 20px 80px;
+    display: flex;
+    align-items: center; 
+}
+
+nav .logo p {
+    font-family: 'Satisfy', cursive;    
+    font-size: 34px;
+    letter-spacing: 4px;
+    margin: 0 ;
+    padding: 0;
+}
+
+nav .ul-1 {
+    margin: 0;
+}
+
+nav .ul-1 li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px 0;
+}
+
+nav .ul-1 li a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    padding: 0 50px;
+}
+
+label img {
+    width: 30px;
+}
+
+.checkbtn {
+    font-size: 25px;
+    cursor: pointer;
+    float: left;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+#search {
+    display: none;
+}
+
+.search {
+    width: 250px;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.searchbtn {
+    display: none;
+}
+
+.ul-2 {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.li-2 {
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (min-width: 990px) {
+    nav {
+        justify-content: center;
+    }
+
+    .search {
+        margin-left: 50%;
+    }
+
+    nav .ul-1 li a:hover {
+        background-color: #232323;
+        color: #eee;
+        padding: 10px 50px;
+        transition: 0.5s ease-in-out;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    
+    nav {
+        padding: 5px 0 ;
+        justify-content: center;
+    }
+
+    .checkbtn {
+        display: block;
+        float: left;
+        margin: 0 20px;
+    }
+
+    nav .logo {
+        width: 100%;
+    }
+
+    nav .logo p {
+        font-size: 30px;
+        padding: 5px 0;
+        text-align: center;
+    }
+
+    nav .ul-1 {
+        width: 100%;
+        height: fit-content;
+        position: fixed;
+        top: 50px;
+        margin: 0;
+        padding: 0;
+        left: -100%;
+        text-align: center;
+        transition: 1s ease;
+        background-color: #fff;
+    }
+    
+    nav .ul-1 a:hover {
+        color: #999;
+    }
+
+    nav .ul-1 li {
+        display: block;
+        margin: 20px 0;
+        line-height: 20px;
+        width: 100%;
+    }
+
+    #check:checked ~ .ul-1 {
+        left: 0;
+    }
+
+    .searchbtn {
+        display: block;
+        float: right;    
+        width: 25px;
+        margin: 0 20px;
+    } 
+    
+    .ul-2 {
+        position: fixed;
+        top: 50px;
+        right: -100%;
+        transition: 1s ease;
+    }
+
+    nav .ul-2 li {
+        display: block;
+        margin: 20px 0;
+        line-height: 20px;
+    }
+
+    #search:checked ~ .ul-2{
+        right: 0;   
+    }
+
+}
